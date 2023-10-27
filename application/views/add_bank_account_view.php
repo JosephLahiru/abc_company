@@ -46,8 +46,11 @@
 </head>
 
 <body>
-    <h2>Add Bank Account</h2>
-    <?php echo validation_errors(); ?>
+    <?php $this->load->view('navbar'); ?>
+    <h2 style="margin:20px">Add Bank Account</h2>
+    <center>
+        <?php echo validation_errors(); ?>
+    </center>
     <?php echo form_open('BankAccountController/add'); ?>
     <label for="bank_name">Bank Name</label>
     <input type="text" id="bank_name" name="bank_name">

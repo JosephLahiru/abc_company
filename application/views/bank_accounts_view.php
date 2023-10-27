@@ -7,8 +7,9 @@
     <title>Bank Accounts</title>
     <style>
         table {
-            width: 100%;
+            width: 95%;
             border-collapse: collapse;
+            margin: 10px;
         }
 
         th,
@@ -25,7 +26,8 @@
 </head>
 
 <body>
-    <h2>Bank Accounts</h2>
+    <?php $this->load->view('navbar'); ?>
+    <h2 style="margin:20px">Bank Accounts</h2>
     <table>
         <tr>
             <th>Bank Name</th>

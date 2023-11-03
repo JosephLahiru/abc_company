@@ -23,7 +23,7 @@ class BankAccountController extends CI_Controller
         $this->form_validation->set_rules('branch', 'Branch', 'required');
 
         // Validate bank account number: allow only numbers
-        $this->form_validation->set_rules('account_number', 'Account Number', 'required|numeric');
+        $this->form_validation->set_rules('account_number', 'Account Number', 'required|numeric|max_length[16]|min_length[8]');
 
         if ($this->form_validation->run() == FALSE) {
             // If validation fails, load the add_bank_account_view to show validation errors

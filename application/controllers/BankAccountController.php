@@ -19,8 +19,8 @@ class BankAccountController extends CI_Controller
         $this->load->library('form_validation');
 
         // Set validation rules
-        $this->form_validation->set_rules('bank_name', 'Bank Name', 'required');
-        $this->form_validation->set_rules('branch', 'Branch', 'required');
+        $this->form_validation->set_rules('bank_name', 'Bank Name', 'required|max_length[100]|');
+        $this->form_validation->set_rules('branch', 'Branch', 'required|max_length[50]|');
 
         // Validate bank account number: allow only numbers
         $this->form_validation->set_rules('account_number', 'Account Number', 'required|numeric|max_length[16]|min_length[8]');
